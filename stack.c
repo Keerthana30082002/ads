@@ -24,7 +24,9 @@ int main()
 					break;
 			case 3:display();
 					break;
-			case 4:exit(0);
+			case 4:peek();
+					break;
+			case 5:exit(0);
 			default:printf("\nWrong choice");
 		}
 	}
@@ -48,6 +50,12 @@ void pop()
 		printf("\nDeleted element:%d\n",stack[top]);
 		top--;
 	}
+}
+int peek()
+{
+	if (top == -1)
+		printf("\n STACK EMPTY!!!!");
+	printf("\n Element in top of stack: = %d ", stack[top]);
 }
 void display()
 {
